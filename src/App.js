@@ -1,5 +1,5 @@
 import "./App.css";
-import "./blockly/Liquide";
+import "./blockly/Liquid";
 import "./blockly/Example";
 import React, {useState} from "react";
 import {BlocklyWorkspace} from "react-blockly";
@@ -46,12 +46,12 @@ export default function App() {
             },
             {
                 kind: "category",
-                name: "Liquide",
+                name: "Liquid",
                 colour: "#5CA699",
                 contents: [
-                    {kind: "block", type: "liquide-v1"},
-                    {kind: "block", type: "liquide-v2"},
-                    {kind: "block", type: "liquide-wash"},
+                    {kind: "block", type: "liquid-v1"},
+                    {kind: "block", type: "liquid-v2"},
+                    {kind: "block", type: "liquid-wash"},
                 ],
             },
             {

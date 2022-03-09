@@ -1,14 +1,14 @@
 import Blockly from 'blockly';
 import 'blockly/python';
 
-Blockly.Blocks['liquide-v1'] = {
+Blockly.Blocks['liquid-v1'] = {
     init: function () {
         this.appendDummyInput()
-            .appendField("Use liquide:")
-            .appendField(new Blockly.FieldLabelSerializable("type:"), "liquide-type-label")
-            .appendField(new Blockly.FieldDropdown([["type_1", "OPTION_1"], ["type_2", "OPTION_2"], ["type_3", "OPTION_3"]]), "liquide-type")
+            .appendField("Use liquid:")
+            .appendField(new Blockly.FieldLabelSerializable("type:"), "liquid-type-label")
+            .appendField(new Blockly.FieldDropdown([["type_1", "OPTION_1"], ["type_2", "OPTION_2"], ["type_3", "OPTION_3"]]), "liquid-type")
             .appendField("name:")
-            .appendField(new Blockly.FieldTextInput("liquide name"), "liquide-name");
+            .appendField(new Blockly.FieldTextInput("liquid name"), "liquid-name");
         this.appendDummyInput()
             .appendField("Temperature:")
             .appendField(new Blockly.FieldNumber(0, 0, 110, 0.1), "slot-temp")
@@ -23,15 +23,15 @@ Blockly.Blocks['liquide-v1'] = {
 
 };
 
-Blockly.Python['liquide-v1'] = function (block) {
-    const text_name = block.getFieldValue('liquide-type');
+Blockly.Python['liquid-v1'] = function (block) {
+    const text_name = block.getFieldValue('liquid-type');
     const statements_content = Blockly.Python.statementToCode(block, 'Content');
     console.log(text_name)
     return text_name;
 };
 
 
-Blockly.Blocks['liquide-v2'] = {
+Blockly.Blocks['liquid-v2'] = {
 
     validate: function (newValue) {
         this.getSourceBlock().updateConnections(newValue);
@@ -44,8 +44,8 @@ Blockly.Blocks['liquide-v2'] = {
         // Go to database;
 
         this.appendDummyInput()
-            .appendField("Use liquide:")
-            .appendField(new Blockly.FieldTextInput("liquide name"), "liquide-name");
+            .appendField("Use liquid:")
+            .appendField(new Blockly.FieldTextInput("liquid name"), "liquid-name");
         this.appendDummyInput()
             .appendField("Temperature:")
             .appendField(new Blockly.FieldNumber(0, 0, 110, 0.1), "slot-temp")
@@ -60,13 +60,13 @@ Blockly.Blocks['liquide-v2'] = {
     },
 };
 
-Blockly.Python['liquide-v2'] = function (block) {
+Blockly.Python['liquid-v2'] = function (block) {
     const text_name = block.getFieldValue('Name');
     const statements_content = Blockly.Python.statementToCode(block, 'Content');
     return 'def ' + text_name + '(_object,**kwargs):\n' + statements_content + '\n';
 };
 
-Blockly.Blocks['liquide-wash'] = {
+Blockly.Blocks['liquid-wash'] = {
     init: function () {
         this.appendDummyInput()
             .appendField("Run washing:")
@@ -92,7 +92,7 @@ Blockly.Blocks['liquide-wash'] = {
     },
 };
 
-Blockly.Python['liquide-wash'] = function (block) {
+Blockly.Python['liquid-wash'] = function (block) {
     const text_name = block.getFieldValue('Name');
     const statements_content = Blockly.Python.statementToCode(block, 'Content');
     return 'def ' + text_name + '(_object,**kwargs):\n' + statements_content + '\n';
