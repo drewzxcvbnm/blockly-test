@@ -1,5 +1,5 @@
 import "./App.css";
-import "./blockly/Liquid";
+import "./blockly/Library";
 import "./blockly/Example";
 import React, {useState} from "react";
 import {BlocklyWorkspace} from "react-blockly";
@@ -9,60 +9,37 @@ export default function App() {
     const [xml, setXml] = useState("");
     const [javascriptCode, setJavascriptCode] = useState("");
 
+    // const initialXml =
+        // '<xml xmlns="http://www.w3.org/1999/xhtml"><block type="text" x="70" y="30"><field name="TEXT"></field></block></xml>';
     const initialXml =
-        '<xml xmlns="http://www.w3.org/1999/xhtml"><block type="text" x="70" y="30"><field name="TEXT"></field></block></xml>';
-    const toolboxCategories = {
-        kind: "categoryToolbox",
-        contents: [
-            {
-                kind: "category",
-                name: "Logic",
-                colour: "#5C81A6",
-                contents: [
-                    {
-                        kind: "block",
-                        type: "controls_if",
-                    },
-                    {
-                        kind: "block",
-                        type: "logic_compare",
-                    },
-                ],
-            },
-            {
-                kind: "category",
-                name: "Time",
-                colour: "#5CA65C",
-                contents: [
-                    {
-                        kind: "block",
-                        type: "math_round",
-                    },
-                    {
-                        kind: "block",
-                        type: "math_number",
-                    },
-                ],
-            },
-            {
-                kind: "category",
-                name: "Liquid",
-                colour: "#5CA699",
-                contents: [
-                    {kind: "block", type: "liquid-v1"},
-                    {kind: "block", type: "liquid-v2"},
-                    {kind: "block", type: "liquid-wash"},
-                ],
-            },
-            {
-                kind: "category",
-                name: "Example",
-                colour: "#5CA699",
-                contents: [
-                    {kind: "block", type: "mySampleBlock"},
-                ],
-            },
-        ],
+        '<xml xmlns="http://www.w3.org/1999/xhtml"><block type="begin_protocol" x="70" y="30"></block></xml>';
+    const toolboxCategories = 
+    {
+        // kind: "categoryToolbox",
+        contents:
+         [
+            // {
+            //     kind: "category",
+            //     name: "Liquid Application",
+            //     colour: "#5CA699",
+            //     contents: [
+                    {kind: "block", type: "apply_liquid"},
+                    {kind: "block", type: "apply_washing_liquid"},
+                    {kind: "block", type: "apply_parafinization_liquid"},
+                // ],
+            // },
+            // {
+                // kind: "category",
+                // name: "Other",
+                // colour: "#5CA699",
+                // contents: [
+                    // {kind: "block", type: "begin_protocol"},
+                    {kind: "block", type: "repeat"},
+                    {kind: "block", type: "set_temperature"},
+                    {kind: "block", type: "normalize_temperature"},
+                // ],
+            // },
+        ]
     };
 
     function workspaceDidChange(workspace) {

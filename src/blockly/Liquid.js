@@ -135,3 +135,33 @@ Blockly.Python['exp-v1'] = function (block) {
     return 'def ' + text_name + '(_object,**kwargs):\n' + statements_content + '\n';
 };
 
+
+
+
+// Blockly.Blocks['apply_liquid'] = {
+//     init: function () {
+//         this.appendDummyInput()
+//             .appendField("Apply")
+//             .appendField(new Blockly.FieldNumber(0), "volume")
+//             .appendField("ml of ")
+//             .appendField(new Blockly.FieldDropdown([["liquid_1", "liquid_1"], ["liquid_2", "liquid_2"], ["liquid_3", "liquid_3"]]), "liquid")
+//             .appendField("for")
+//             .appendField(new Blockly.FieldNumber(0), "time")
+//             .appendField("minutes at ")
+//             .appendField(new Blockly.FieldNumber(0), "degrees")
+//             .appendField("°C");
+//         this.setNextStatement(true, null);
+//         this.setColour(230);
+//         this.setTooltip("");
+//         this.setHelpUrl("");
+//     }
+// };
+// Blockly.Python['apply_liquid'] = function (block) {
+//     var number_volume = block.getFieldValue('volume');
+//     var dropdown_liquid = block.getFieldValue('liquid');
+//     var number_time = block.getFieldValue('time');
+//     var number_degrees = block.getFieldValue('degrees');
+//     // TODO: Assemble Python into code variable.
+//     var code = '...\n';
+//     return code;
+// };
